@@ -1,0 +1,137 @@
+name: innerverse
+description: A revolutionary self-dialogue and inner exploration platform. Your mind is a universe worth exploring.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Material Design & Icons
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+
+  # State Management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+
+  # Navigation
+  go_router: ^13.1.0
+
+  # Local Database (Drift for cross-platform SQLite)
+  drift: ^2.14.1
+  sqlite3_flutter_libs: ^0.5.18
+  drift_flutter: ^0.1.0
+
+  # Local Storage
+  shared_preferences: ^2.2.2
+  hive_flutter: ^1.1.0
+
+  # Security
+  local_auth: ^2.1.8
+  flutter_secure_storage: ^9.0.0
+  crypto: ^3.0.3
+
+  # Audio
+  just_audio: ^0.9.36
+  audio_session: ^0.1.18
+
+  # PDF Export
+  pdf: ^3.10.7
+  printing: ^5.11.1
+
+  # File Operations
+  path_provider: ^2.1.2
+  file_picker: ^6.1.1
+  share_plus: ^7.2.1
+
+  # Animations
+  flutter_animate: ^4.3.0
+  lottie: ^3.0.0
+  rive: ^0.12.4
+
+  # Utilities
+  uuid: ^4.2.2
+  intl: ^0.19.0
+  equatable: ^2.0.5
+  collection: ^1.18.0
+
+  # Charts for Insights
+  fl_chart: ^0.66.0
+
+  # Clipboard
+  flutter_clipboard_manager: ^0.0.4
+
+  # URL Launcher
+  url_launcher: ^6.2.3
+
+  # Permissions
+  permission_handler: ^11.2.0
+
+  # Local Notifications
+  flutter_local_notifications: ^16.3.0
+  timezone: ^0.9.2
+
+  # Image handling
+  cached_network_image: ^3.3.1
+  image_picker: ^1.0.7
+  flutter_image_compress: ^2.1.0
+
+  # Connectivity check
+  connectivity_plus: ^5.0.2
+
+  # Device Info
+  device_info_plus: ^9.1.1
+
+  # Package Info
+  package_info_plus: ^5.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  build_runner: ^2.4.8
+  drift_dev: ^2.14.1
+  riverpod_generator: ^2.3.9
+  flutter_launcher_icons: ^0.13.1
+  json_serializable: ^6.7.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  web:
+    generate: true
+    image_path: "assets/icons/app_icon.png"
+    background_color: "#1a0a2e"
+    theme_color: "#6366f1"
+  image_path: "assets/icons/app_icon.png"
+  adaptive_icon_background: "#1a0a2e"
+  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/audio/
+    - assets/fonts/
+    - assets/animations/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Thin.ttf
+          weight: 100
