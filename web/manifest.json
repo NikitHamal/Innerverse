@@ -1,0 +1,82 @@
+{
+  "name": "Innerverse",
+  "short_name": "Innerverse",
+  "description": "A revolutionary self-dialogue and inner exploration platform. Your mind is a universe worth exploring.",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1a0a2e",
+  "theme_color": "#6366f1",
+  "categories": ["health", "lifestyle", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/Icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/Icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "icons/screenshot-narrow.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Reflection",
+      "short_name": "Reflect",
+      "description": "Start a new reflection session",
+      "url": "/spaces",
+      "icons": [
+        {
+          "src": "icons/shortcut-reflect.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Time Vault",
+      "short_name": "Vault",
+      "description": "View your time capsules",
+      "url": "/vault",
+      "icons": [
+        {
+          "src": "icons/shortcut-vault.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
