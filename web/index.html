@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    Innerverse - Your inner universe awaits
+    A revolutionary self-dialogue and inner exploration platform
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Innerverse - A revolutionary self-dialogue and inner exploration platform. Your mind is a universe worth exploring.">
+  <meta name="keywords" content="self-dialogue, journaling, mental wellness, inner exploration, self-reflection">
+  <meta name="author" content="Innerverse">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Innerverse">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Innerverse">
+  <meta property="og:description" content="Your mind is a universe worth exploring. A revolutionary self-dialogue and inner exploration platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icons/Icon-512.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Innerverse">
+  <meta name="twitter:description" content="Your mind is a universe worth exploring.">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1a0a2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Innerverse</title>
+
+  <style>
+    :root {
+      --cosmic-dark: #1a0a2e;
+      --cosmic-purple: #6366f1;
+      --cosmic-teal: #14b8a6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--cosmic-dark) 0%, #0d1b2a 100%);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: white;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cosmic-purple), var(--cosmic-teal));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 60px rgba(99, 102, 241, 0.4);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    .logo svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 60px rgba(99, 102, 241, 0.5);
+      }
+    }
+
+    .app-name {
+      margin-top: 24px;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out 0.3s forwards;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      font-size: 14px;
+      opacity: 0;
+      color: rgba(255, 255, 255, 0.7);
+      animation: fadeIn 0.8s ease-out 0.6s forwards;
+    }
+
+    .loader {
+      margin-top: 48px;
+      width: 32px;
+      height: 32px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-top-color: white;
+      border-radius: 50%;
+      opacity: 0;
+      animation: spin 1s linear infinite, fadeIn 0.5s ease-out 1s forwards;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Hide loading after Flutter loads */
+    .flutter-loaded .loading-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+      </svg>
+    </div>
+    <div class="app-name">INNERVERSE</div>
+    <div class="tagline">Your mind is a universe worth exploring</div>
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    // Service Worker Registration for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function() {
+        document.body.classList.add('flutter-loaded');
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+
+    // Keyboard shortcuts for power users
+    document.addEventListener('keydown', function(e) {
+      // Ctrl/Cmd + K: Quick search (will be handled by Flutter)
+      // Ctrl/Cmd + N: New conversation
+      // Escape: Close dialogs/modals
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
