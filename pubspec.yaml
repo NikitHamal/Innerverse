@@ -24,7 +24,7 @@ dependencies:
   # Local Database (Drift for cross-platform SQLite)
   drift: ^2.19.1
   sqlite3_flutter_libs: ^0.5.18
-  drift_flutter: ^0.3.0
+  drift_flutter: 0.2.0
 
   # Local Storage
   shared_preferences: ^2.2.2
