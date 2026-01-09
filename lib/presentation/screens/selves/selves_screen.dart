@@ -258,7 +258,7 @@ class _SelvesScreenState extends ConsumerState<SelvesScreen>
 
 /// Orbiting persona orb widget
 class _PersonaOrb extends StatelessWidget {
-  final PersonaConfig config;
+  final PersonaDefault config;
   final VoidCallback onTap;
 
   const _PersonaOrb({
@@ -297,7 +297,7 @@ class _PersonaOrb extends StatelessWidget {
 
 /// Persona list item widget
 class _PersonaListItem extends StatelessWidget {
-  final PersonaConfig config;
+  final PersonaDefault config;
   final VoidCallback onTap;
   final bool isDark;
 

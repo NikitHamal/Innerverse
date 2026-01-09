@@ -5,6 +5,7 @@ import 'package:equatable/equatable.dart';
 
 /// Preset occasions for time capsules
 enum CapsuleOccasion {
+  none,
   birthday,
   newYear,
   anniversary,
@@ -17,6 +18,7 @@ enum CapsuleOccasion {
   String get id => name;
 
   String get displayName => switch (this) {
+        CapsuleOccasion.none => 'None',
         CapsuleOccasion.birthday => 'Birthday',
         CapsuleOccasion.newYear => 'New Year',
         CapsuleOccasion.anniversary => 'Anniversary',
@@ -28,6 +30,7 @@ enum CapsuleOccasion {
       };
 
   String get emoji => switch (this) {
+        CapsuleOccasion.none => '\u{1F4C5}',
         CapsuleOccasion.birthday => '\u{1F382}',
         CapsuleOccasion.newYear => '\u{1F386}',
         CapsuleOccasion.anniversary => '\u{1F495}',

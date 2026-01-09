@@ -384,12 +384,12 @@ Your Past Self''';
   void _updateUnlockDateForOccasion(CapsuleOccasion occasion) {
     final now = DateTime.now();
     switch (occasion) {
+      case CapsuleOccasion.none:
+        break;
       case CapsuleOccasion.birthday:
-        // Next birthday (assume 1 year from now as placeholder)
         setState(() => _unlockDate = DateTime(now.year + 1, now.month, now.day));
         break;
       case CapsuleOccasion.newYear:
-        // Next new year
         setState(() => _unlockDate = DateTime(now.year + 1, 1, 1));
         break;
       case CapsuleOccasion.anniversary:
@@ -399,9 +399,12 @@ Your Past Self''';
         setState(
             () => _unlockDate = DateTime(now.year + 1, 6, 1)); // June next year
         break;
+      case CapsuleOccasion.milestone:
+        setState(() => _unlockDate = DateTime(now.year + 1, now.month, now.day));
+        break;
+      case CapsuleOccasion.reminder:
+      case CapsuleOccasion.letter:
       case CapsuleOccasion.custom:
-      case CapsuleOccasion.none:
-        // Keep current date
         break;
     }
   }

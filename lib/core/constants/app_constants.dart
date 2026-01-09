@@ -78,6 +78,10 @@ abstract class AppBreakpoints {
 
 /// Storage keys for SharedPreferences
 abstract class StorageKeys {
+  // Hive box names
+  static const String preferences = 'preferences';
+  static const String cache = 'cache';
+
   // Onboarding
   static const String hasCompletedOnboarding = 'has_completed_onboarding';
   static const String userName = 'user_name';
