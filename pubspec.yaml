@@ -62,9 +62,6 @@ dependencies:
   # Charts for Insights
   fl_chart: ^0.66.0
 
-  # Clipboard
-  flutter_clipboard_manager: ^0.0.4
-
   # URL Launcher
   url_launcher: ^6.2.3
 
@@ -87,7 +84,7 @@ dependencies:
   device_info_plus: ^9.1.1
 
   # Package Info
-  package_info_plus: ^5.0.1
+  package_info_plus: ^9.0.0
 
 dev_dependencies:
   flutter_test:
